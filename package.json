@@ -1,6 +1,6 @@
 {
   "name": "@purkkakoodari/js-confetti",
-  "version": "0.14.0",
+  "version": "0.14.1",
   "license": "MIT",
   "description": "JS Confetti library with zero dependencies, works without any config, TS typings included, adapts to user screen",
   "module": "dist/index.mjs",
