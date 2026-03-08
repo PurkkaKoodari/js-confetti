@@ -6,7 +6,10 @@
   "module": "dist/index.mjs",
   "types": "typings/index.d.ts",
   "exports": {
-    ".": "./dist/index.mjs"
+    ".": {
+      "types": "./typings/index.d.ts",
+      "import": "./dist/index.mjs"
+    }
   },
   "repository": {
     "type": "git",
