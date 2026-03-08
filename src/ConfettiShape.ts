@@ -7,9 +7,6 @@ import {
   MAX_DRAG_FORCE_COEFFICIENT,
   ROTATION_SLOWDOWN_ACCELERATION,
 
-  MIN_INITIAL_CONFETTI_SPEED,
-  MAX_INITIAL_CONFETTI_SPEED,
-
   MIN_FINAL_X_CONFETTI_SPEED,
   MAX_FINAL_X_CONFETTI_SPEED,
 
@@ -81,9 +78,11 @@ class ConfettiShape {
       canvasWidth,
       initialFlightAngle,
       rotationAngle,
-      shouldHideConfettiInShiftedPosition = false
+      shouldHideConfettiInShiftedPosition = false,
+      initialVelocityMin,
+      initialVelocityMax,
     } = args
-    const randomConfettiSpeed = generateRandomNumber(MIN_INITIAL_CONFETTI_SPEED, MAX_INITIAL_CONFETTI_SPEED, 3)
+    const randomConfettiSpeed = generateRandomNumber(initialVelocityMin, initialVelocityMax, 3)
     const initialSpeed = randomConfettiSpeed * getWindowWidthCoefficient(canvasWidth)
 
     this.confettiSpeed = {

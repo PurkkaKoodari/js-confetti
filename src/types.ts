@@ -38,6 +38,10 @@ interface IAddConfettiConfig {
   // otherwise they would be fired from the sides of the screen (default behaviour)
   confettiDispatchPosition?: IPosition | null,
 
+  // initial velocity range for confetti (controls how fast confetti is launched)
+  initialVelocityMin?: number,
+  initialVelocityMax?: number,
+
   // @deprecated: wrong plural forms were used
   emojies?: string[],
   confettiesNumber?: number,
@@ -51,6 +55,8 @@ type INormalizedAddConfettiConfig = {
   emojis: string[],
   emojiSize: number,
   confettiDispatchPosition?: IPosition | null,
+  initialVelocityMin: number,
+  initialVelocityMax: number,
 }
 
 

@@ -6,6 +6,9 @@ import {
   DEFAULT_CONFETTI_NUMBER,
   DEFAULT_EMOJIS_NUMBER,
   DEFAULT_CONFETTI_COLORS,
+
+  MIN_INITIAL_CONFETTI_SPEED,
+  MAX_INITIAL_CONFETTI_SPEED,
 } from './consts'
 
 function normalizeConfettiConfig(confettiConfig: IAddConfettiConfig): INormalizedAddConfettiConfig {
@@ -17,13 +20,15 @@ function normalizeConfettiConfig(confettiConfig: IAddConfettiConfig): INormalize
     emojis = confettiConfig.emojies || [],
     emojiSize = INITIAL_EMOJI_SIZE,
     confettiDispatchPosition = null,
+    initialVelocityMin = MIN_INITIAL_CONFETTI_SPEED,
+    initialVelocityMax = MAX_INITIAL_CONFETTI_SPEED,
   } = confettiConfig
 
   // deprecate wrong plural forms, used in early releases
   if (confettiConfig.emojies) console.error(`emojies argument is deprecated, please use emojis instead`)
   if (confettiConfig.confettiesNumber) console.error(`confettiesNumber argument is deprecated, please use confettiNumber instead`)
 
-  return { confettiRadius, confettiNumber, confettiColors, emojis, emojiSize, confettiDispatchPosition }
+  return { confettiRadius, confettiNumber, confettiColors, emojis, emojiSize, confettiDispatchPosition, initialVelocityMin, initialVelocityMax }
 }
 
 export { normalizeConfettiConfig }

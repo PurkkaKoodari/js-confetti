@@ -142,6 +142,8 @@ class JSConfetti {
       emojis,
       emojiSize,
       confettiDispatchPosition,
+      initialVelocityMin,
+      initialVelocityMax,
     } = normalizeConfettiConfig(confettiConfig)
 
     const {width: canvasWidth} = this.canvas.getBoundingClientRect()
@@ -161,6 +163,8 @@ class JSConfetti {
         rotationAngle: generateConfettiRotationAngleFiredFromLeftSideOfTheScreen(),
         initialFlightAngle: generateConfettiInitialFlightAngleFiredFromSpecificPosition(),
         shouldHideConfettiInShiftedPosition: true,
+        initialVelocityMin,
+        initialVelocityMax,
       })
 
       confettiGroup.addShapes(confettiShape)
@@ -180,6 +184,8 @@ class JSConfetti {
       confettiColors,
       emojis,
       emojiSize,
+      initialVelocityMin,
+      initialVelocityMax,
     } = normalizeConfettiConfig(confettiConfig)
 
     // Use the bounding rect rather tahn the canvas width / height, because
@@ -214,6 +220,8 @@ class JSConfetti {
         canvasWidth,
         rotationAngle: generateConfettiRotationAngleFiredFromLeftSideOfTheScreen(),
         initialFlightAngle: generateConfettiInitialFlightAngleFiredFromLeftSideOfTheScreen(),
+        initialVelocityMin,
+        initialVelocityMax,
       })
 
       const confettiOnTheRight = new ConfettiShape({
@@ -226,6 +234,8 @@ class JSConfetti {
         canvasWidth,
         rotationAngle: generateConfettiRotationAngleFiredFromRightSideOfTheScreen(),
         initialFlightAngle: generateConfettiInitialFlightAngleFiredFromRightSideOfTheScreen(),
+        initialVelocityMin,
+        initialVelocityMax,
       })
 
       confettiGroup.addShapes(confettiOnTheRight, confettiOnTheLeft)
