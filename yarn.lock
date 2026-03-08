@@ -378,6 +378,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@purkkakoodari/js-confetti@workspace:.":
+  version: 0.0.0-use.local
+  resolution: "@purkkakoodari/js-confetti@workspace:."
+  dependencies:
+    eslint: "npm:^9.33.0"
+    typescript: "npm:^5.9.2"
+    typescript-eslint: "npm:^8.40.0"
+    vite: "npm:^6.3.5"
+  languageName: unknown
+  linkType: soft
+
 "@rollup/rollup-android-arm-eabi@npm:4.59.0":
   version: 4.59.0
   resolution: "@rollup/rollup-android-arm-eabi@npm:4.59.0"
@@ -1445,17 +1456,6 @@ __metadata:
   checksum: 10c0/5884815115bceac452877659a9c7726382531592f43dc29e5d48b7c4100661aed54018cb90bd36cb2eaeba521092570769167acbb95c18d39afdccbcca06c5ce
   languageName: node
   linkType: hard
-
-"js-confetti@workspace:.":
-  version: 0.0.0-use.local
-  resolution: "js-confetti@workspace:."
-  dependencies:
-    eslint: "npm:^9.33.0"
-    typescript: "npm:^5.9.2"
-    typescript-eslint: "npm:^8.40.0"
-    vite: "npm:^6.3.5"
-  languageName: unknown
-  linkType: soft
 
 "js-yaml@npm:^4.1.0":
   version: 4.1.0

@@ -1,5 +1,5 @@
 {
-  "name": "js-confetti",
+  "name": "@purkkakoodari/js-confetti",
   "version": "0.13.1",
   "license": "MIT",
   "description": "JS Confetti library with zero dependencies, works without any config, TS typings included, adapts to user screen",
@@ -10,10 +10,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/loonywizard/js-confetti.git"
+    "url": "https://github.com/PurkkaKoodari/js-confetti.git"
   },
   "author": "Vladimir Nikitin vladimirsuperwizard@gmail.com",
-  "homepage": "https://github.com/loonywizard/js-confetti",
+  "homepage": "https://github.com/PurkkaKoodari/js-confetti",
   "files": [
     "dist",
     "typings"
@@ -29,6 +29,7 @@
     "typescript-eslint": "^8.40.0",
     "vite": "^6.3.5"
   },
+  "packageManager": "yarn@4.9.2",
   "keywords": [
     "confetti",
     "js-confetti"

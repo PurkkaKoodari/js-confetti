@@ -3,3 +3,7 @@ node_modules
 dist
 example_dist
 .DS_Store
+.yarn/cache
+.yarn/install-state.gz
+.yarn/unplugged
+.pnp.*
