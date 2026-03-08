@@ -54,7 +54,7 @@ class ConfettiShape {
   private initialPosition: IPosition
   private currentPosition: IPosition
 
-  private readonly color: string | null
+  private readonly color: string
   private readonly emoji: string | null
 
   private radiusYUpdateDirection: 'up' | 'down'
@@ -125,7 +125,7 @@ class ConfettiShape {
     this.currentPosition = { ...shiftedInitialPosition }
     this.initialPosition = { ...shiftedInitialPosition }
 
-    this.color = emojis.length ? null : generateRandomArrayElement(confettiColors)
+    this.color = generateRandomArrayElement(confettiColors)
     this.emoji = emojis.length ? generateRandomArrayElement(emojis) : null
 
     this.createdAt = new Date().getTime()
@@ -148,17 +148,9 @@ class ConfettiShape {
 
     const dpr = window.devicePixelRatio
 
-    if (color) {
-      canvasContext.fillStyle = color
+    canvasContext.fillStyle = color
 
-      canvasContext.beginPath()
-
-      canvasContext.ellipse(
-        currentPosition.x * dpr, currentPosition.y * dpr, radius.x * dpr, radius.y * dpr,
-        rotationAngle, 0, 2 * Math.PI,
-      )
-      canvasContext.fill()
-    } else if (emoji) {
+    if (emoji) {
       canvasContext.font = `${emojiSize}px serif`
 
       canvasContext.save()
@@ -167,6 +159,14 @@ class ConfettiShape {
       canvasContext.textAlign = 'center'
       canvasContext.fillText(emoji, 0, 0)
       canvasContext.restore()
+    } else {
+      canvasContext.beginPath()
+
+      canvasContext.ellipse(
+        currentPosition.x * dpr, currentPosition.y * dpr, radius.x * dpr, radius.y * dpr,
+        rotationAngle, 0, 2 * Math.PI,
+      )
+      canvasContext.fill()
     }
   }
 
